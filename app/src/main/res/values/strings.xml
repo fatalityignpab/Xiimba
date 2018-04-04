@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Xiimba</string>
+    <string name="inicio_usuario">Inicio</string>
+    <string name="inicio_password">Contraseña</string>
+    <string name="inicio_sesion">Iniciar sesión</string>
+    <string name="inicio_primera">¿No estas registrado?</string>
+    <string name="inicio_registrateya">Registrate</string>
+    <string name="title_activity_mapa_didactica">MapaDidactica</string>
+</resources>
