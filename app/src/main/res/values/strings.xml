@@ -7,4 +7,10 @@
     <string name="inicio_registrateya">Registrate</string>
     <string name="title_activity_mapa_didactica">MapaDidactica</string>
     <string name="registro_titulo">Registrate</string>
+    <string name="registro_btnregistrar">Registrar</string>
+    <string name="registro_lblNombre">Nombre</string>
+    <string name="registro_lblApPaterno">Apellido Paterno</string>
+    <string name="registro_lblApMaterno">Apellido Materno</string>
+    <string name="registro_lblCorreo">Correo</string>
+    <string name="registro_lblPais">Pais</string>
 </resources>
