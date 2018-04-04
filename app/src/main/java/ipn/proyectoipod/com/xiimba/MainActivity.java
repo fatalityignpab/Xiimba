@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean iniciarSesion(){
-        String boleta = "";
-        String nombre = "";
+        String nombrecompleto = "";
         String correo = "";
+        String lugar = "";
         try {
             OracleBD oracle = new OracleBD(txtUsuario.getText().toString().trim(), txtPass.getText().toString().trim());
             oracle.CrearConexionUsuario();
@@ -79,13 +79,22 @@ public class MainActivity extends AppCompatActivity {
             Statement stmt = con.createStatement();
             ResultSet rs;
 
-            rs = stmt.executeQuery("SELECT ad.boleta, ad.nombre ||' '|| ad.appaterno ||' '|| ad.apmaterno AS NombreCompleto, ad.correo FROM adminminifb.alumnos ad WHERE ad.boleta = "+txtUsuario.getText().toString().trim());
+            rs = stmt.executeQuery("SELECT\n" +
+                    "    xi.nombre || ' ' ||\n" +
+                    "    xi.appaterno || ' ' ||\n" +
+                    "    xi.apmaterno AS NombreCompleto,\n" +
+                    "    xi.correo,\n" +
+                    "    xi.cvelugar\n" +
+                    "FROM\n" +
+                    "    xiimba_admin.turista xi\n" +
+                    "WHERE\n" +
+                    "    XI.CVETURISTA = "+txtUsuario.getText().toString().trim());
             while ( rs.next() ) {
-                boleta = rs.getString("boleta");
-                nombre = rs.getString("NombreCompleto");
-                correo = rs.getString("correo");
+                nombrecompleto = rs.getString("NOMBRECOMPLETO");
+                correo = rs.getString("CORREO");
+                lugar = rs.getString("CVELUGAR");
             }
-            registrarUsuarioActivo(boleta, nombre, correo);
+            registrarUsuarioActivo(nombrecompleto, correo, lugar);
             oracle.CerrarConexion();
             return true;
         } catch (SQLException ex) {
@@ -97,12 +106,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void registrarUsuarioActivo(String boleta, String nombre, String correo){
+    public void registrarUsuarioActivo(String nombrecompleto, String correo, String lugar){
         SharedPreferences activo = getSharedPreferences("UsuarioActivo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editreg = activo.edit();
-        editreg.putString("Boleta", boleta);
-        editreg.putString("Nombre", nombre);
-        editreg.putString("Correo", correo); // Ahi se tiene que hacer una consulta antes del usuario (SELECT correo FROM alumno WHERE usuario = '')
+        editreg.putString("Nombre", nombrecompleto);
+        editreg.putString("Correo", correo);
+        editreg.putString("Lugar", lugar); // Ahi se tiene que hacer una consulta antes del usuario (SELECT correo FROM alumno WHERE usuario = '')
         editreg.putString("Pass", txtPass.getText().toString().trim()); //ALTAMENTE PELIGROSO
         editreg.commit();
     }
