@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Xiimba</string>
-    <string name="inicio_usuario">Inicio</string>
+    <string name="inicio_usuario">Usuario</string>
     <string name="inicio_password">Contraseña</string>
-    <string name="inicio_sesion">Iniciar sesión</string>
+    <string name="inicio_sesion">Entrar</string>
     <string name="inicio_primera">¿No estas registrado?</string>
-    <string name="inicio_registrateya">Registrate</string>
+    <string name="inicio_registrateya">Registro</string>
     <string name="title_activity_mapa_didactica">MapaDidactica</string>
     <string name="registro_titulo">Registrate</string>
     <string name="registro_btnregistrar">Registrar</string>
