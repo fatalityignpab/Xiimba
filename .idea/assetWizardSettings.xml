@@ -13,14 +13,14 @@
                       <PersistentState>
                         <option name="children">
                           <map>
-                            <entry key="actionbar">
+                            <entry key="launcherLegacy">
                               <value>
                                 <PersistentState>
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Imágenes/Para Android Studio/password_3715.png" />
-                                      <entry key="outputName" value="ic_action_pass" />
+                                      <entry key="imageAsset" value="C:\Users\x1 carbon\Desktop\LogoRecortado.PNG" />
+                                      <entry key="outputName" value="ic_xiimba" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -30,7 +30,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
+                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>

@@ -15,7 +15,6 @@ public class Validaciones {
     public static final String REGEX_EMAIL2 = "^[a-zA-Z0-9\\._-]{0,}([.]?[a-zA-Z0-9\\._-]{1,})[@](gmail.com|hotmail.com|yahoo.com.mx|outlook.com)$"; //live
     public static final String REGEX_CAPITALIZAR_NOMBRE = "^[a-zA-Z0-9\\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$"; //bUSCAR EXCEPCION COMO DE LA ROSA, DE LA O, ETC.
 
-
     public Validaciones() {
     }
 
