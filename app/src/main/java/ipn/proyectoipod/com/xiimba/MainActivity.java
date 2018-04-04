@@ -1,5 +1,6 @@
 package ipn.proyectoipod.com.xiimba;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText txtUsuario, txtPass;
     Button btnIniciar, btnRegistro;
+    SharedPreferences usuario, pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
