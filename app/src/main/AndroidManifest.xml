@@ -21,7 +21,11 @@
         </activity>
         <activity android:name=".MapaInteractivo" />
         <activity android:name=".Eventos" />
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Registro" />
+        <activity
+            android:name=".MenuXiimba"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
