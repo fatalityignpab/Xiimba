@@ -6,4 +6,5 @@
     <string name="inicio_primera">¿No estas registrado?</string>
     <string name="inicio_registrateya">Registrate</string>
     <string name="title_activity_mapa_didactica">MapaDidactica</string>
+    <string name="registro_titulo">Registrate</string>
 </resources>

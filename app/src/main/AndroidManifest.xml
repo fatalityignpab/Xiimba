@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapaInteractivo" />
-        <activity android:name=".Eventos"></activity>
+        <activity android:name=".Eventos" />
+        <activity android:name=".Registro"></activity>
     </application>
 
 </manifest>
