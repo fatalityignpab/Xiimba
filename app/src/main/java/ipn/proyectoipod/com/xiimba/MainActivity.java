@@ -42,10 +42,47 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        irInicio();
+                        //irInicio();
+                        testInicio();
                     }
                 }
         );
+
+        btnRegistro.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        irRegistro();
+                    }
+                }
+        );
+    }
+
+    private void testInicio(){
+        String usuario = txtUsuario.getText().toString().trim();
+        String pass = txtPass.getText().toString().trim();
+        if (txtUsuario.getText().toString().trim().isEmpty()){
+            txtUsuario.setError("Campo Vacio");
+            txtUsuario.requestFocus();
+        } else if (txtPass.getText().toString().trim().isEmpty()) {
+            txtPass.setError("Campo Vacio");
+            txtPass.requestFocus();
+        } else {
+            //if (txtUsuario.getText().toString().trim() == "root" && txtPass.getText().toString().trim() == "root"){
+                Intent menu = new Intent(MainActivity.this ,MenuXiimba.class);
+                this.startActivity(menu);
+                //finish();
+            //} else {
+            //    txtUsuario.setText("");
+            //    txtPass.setText("");
+            //}
+        }
+    }
+
+    private void irRegistro(){
+        Intent menu = new Intent(MainActivity.this ,Registro.class);
+        this.startActivity(menu);
+        //finish();
     }
 
     private void irInicio(){
@@ -60,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             if (verdad){
                 Intent menu = new Intent(MainActivity.this ,MenuXiimba.class);
                 this.startActivity(menu);
-                finish();
+                //finish();
             } else {
                 txtUsuario.setText("");
                 txtPass.setText("");
@@ -72,8 +109,10 @@ public class MainActivity extends AppCompatActivity {
         String nombrecompleto = "";
         String correo = "";
         String lugar = "";
+        String usuario = txtUsuario.getText().toString().trim();
+        String pass = txtPass.getText().toString().trim();
         try {
-            OracleBD oracle = new OracleBD(txtUsuario.getText().toString().trim(), txtPass.getText().toString().trim());
+            OracleBD oracle = new OracleBD(usuario, pass);
             oracle.CrearConexionUsuario();
             Connection con = oracle.getConexion();
             Statement stmt = con.createStatement();

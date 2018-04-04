@@ -67,7 +67,7 @@
                     android:layout_weight="0.84"
                     android:ems="10"
                     android:hint="@string/registro_lblNombre"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:maxLength="10"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -93,6 +93,7 @@
                 android:layout_weight="0.84"
                 android:ems="10"
                 android:hint="Apellido"
+                android:inputType="text"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -101,8 +102,9 @@
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:gravity="left">
 
@@ -123,7 +125,7 @@
                 android:layout_weight="0.84"
                 android:ems="10"
                 android:hint="Nombre de Usuario"
-                android:inputType="number"
+                android:inputType="text"
                 android:maxLength="10"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
