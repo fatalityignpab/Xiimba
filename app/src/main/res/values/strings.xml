@@ -13,4 +13,10 @@
     <string name="registro_lblApMaterno">Apellido Materno</string>
     <string name="registro_lblCorreo">Correo</string>
     <string name="registro_lblPais">Pais</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

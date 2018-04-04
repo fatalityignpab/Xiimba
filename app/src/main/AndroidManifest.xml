@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ipn.proyectoipod.com.xiimba">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +21,11 @@
         </activity>
         <activity android:name=".MapaInteractivo" />
         <activity android:name=".Eventos" />
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Registro" />
+        <activity
+            android:name=".MenuXiimba"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
