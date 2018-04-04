@@ -34,7 +34,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.84"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
@@ -60,7 +60,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="139dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -73,7 +74,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.84"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
@@ -158,7 +159,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.84"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <Button
@@ -205,6 +206,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
                     app:layout_constraintVertical_bias="0.098" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/sym_action_email" />
             </LinearLayout>
 
         </LinearLayout>
